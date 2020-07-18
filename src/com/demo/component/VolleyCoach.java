@@ -16,17 +16,19 @@ public class VolleyCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
+		System.out.println(">> VolleyCoach: inside getDailyWorkout method");
 		return "Treine seu saque de bola";
 	}
 	
 	@Override
 	public String getDailyFortune() {
+		System.out.println(">> VolleyCoach: inside getDailyFortune method");
 		return fortuneService.getFortune();
 	}
 	
 	@Autowired
 	public void setFortuneService(FortuneService fortuneService) {
-		System.out.println(">> VolleyCoach: inside setFortuneService");
+		System.out.println(">> VolleyCoach: inside setFortuneService method");
 		this.fortuneService = fortuneService;
 	}
 
