@@ -9,5 +9,10 @@ public class VolleyCoach implements Coach {
 	public String getDailyWorkout() {
 		return "Treine seu saque de bola";
 	}
+	
+	@Override
+	public String getDailyFortune() {
+		return null;
+	}
 
 }
