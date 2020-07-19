@@ -1,6 +1,7 @@
 package com.demo.component;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.demo.service.FortuneService;
@@ -27,6 +28,7 @@ public class VolleyCoach implements Coach {
 	}
 	
 	@Autowired
+	@Qualifier("randomFortuneService")
 	public void setFortuneService(FortuneService fortuneService) {
 		System.out.println(">> VolleyCoach: inside setFortuneService method");
 		this.fortuneService = fortuneService;
