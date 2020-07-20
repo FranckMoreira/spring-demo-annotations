@@ -2,11 +2,13 @@ package com.demo.component;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import com.demo.service.FortuneService;
 
 @Component
+@Scope("prototype")
 public class TennisCoach implements Coach {
 
 	private FortuneService fortuneService;
