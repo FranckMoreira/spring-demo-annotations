@@ -1,5 +1,8 @@
 package com.demo.component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -13,6 +16,18 @@ public class VolleyCoach implements Coach {
 	
 	public VolleyCoach() {
 		System.out.println(">> VolleyCoach: inside default constructor");
+	}
+	
+	// define my init method
+	@PostConstruct
+	public void myStartupStuff() {
+		System.out.println(">> VolleyCoach: inside of doMyStartupStuff()");
+	}
+	
+	// define my destroy method
+	@PreDestroy
+	public void doMyCleanupStuff() {
+		System.out.println(">> VolleyCoach: inside of doMycleanupStuff()");
 	}
 
 	@Override
