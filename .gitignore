@@ -1,6 +1,10 @@
+spring-demo-annotations.iml
+
 .classpath
 .project
 .settings/*
+.idea/*
+out/*
 
 lib/*
 target/*
