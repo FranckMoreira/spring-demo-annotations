@@ -1,8 +1,15 @@
 package com.demo.component;
 
 import com.demo.service.FortuneService;
+import org.springframework.beans.factory.annotation.Value;
 
 public class SwinCoach implements Coach {
+
+    @Value("${foo.email}")
+    private String email;
+
+    @Value("${foo.team}")
+    private String team;
 
     private FortuneService fortuneService;
 
@@ -18,5 +25,13 @@ public class SwinCoach implements Coach {
     @Override
     public String getDailyFortune() {
         return fortuneService.getFortune();
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getTeam() {
+        return team;
     }
 }
